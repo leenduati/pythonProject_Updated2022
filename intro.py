@@ -51,6 +51,9 @@ print(my_list)
 
 # List Comprehension
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+for jelly in matrix:
+    print( jelly)
+
 
 # This prints out first item in each nested list
 first_col = [row[0] for row in matrix]
@@ -68,6 +71,7 @@ my_stuff = {
 }
 
 print(my_stuff[True])
+my_stuff.values()
 
 for keys, values in my_stuff.items():
     print(keys, values)
@@ -113,6 +117,7 @@ print(s[1:4])
 # 'go'
 print(s[-1:-3])
 # Bonus: Use indexing to reverse the string
+print(s[::-1])
 
 print("End of Problem 1 ")
 ###############
@@ -159,3 +164,45 @@ name = "Sammy"
 # Use print formatting to print the following string:
 "Hello my dog's name is Sammy and he is 4 years old"
 print("Hello my dog's name is {} and he is {} years old".format(age, name))
+
+# Loops, if, if else, elif, else
+#  and or
+if age > 2:
+    print("age is {}".format(age))
+else:
+    print("age is not greater than 2")
+
+# Iterate through a tuple
+
+
+my_pairs = [(1, 2), (3, 4), (5, 6)]
+for i in my_pairs:
+    print(i)
+
+
+for tup1, tup2 in my_pairs:
+    print(tup1, tup2)
+
+# While loops in python
+y = 0
+while y < 5:
+    print("i is {}".format(y))
+    y = y + 1
+
+
+# use range to generate lists
+print(range(5))
+# Use range to generate simple lists Python’s enumerate() lets you write Pythonic for loops when you need a count and
+# the value from an iterable. The big advantage of enumerate() is that it returns a tuple with the counter and value,
+# so you don’t have to increment the counter yourself. It also gives you the option to change the starting value for
+# the counter.
+l2 = ["lee", "nduati", "francis"]
+l2_en = enumerate(l2, 5)
+# Include number at end function to be the starting point of enumerate function
+for l in l2_en:
+    print(l)
+
+# List comprehension
+num = [1, 2, 3]
+out = [x**2 for x in num]
+print(out)
