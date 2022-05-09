@@ -446,24 +446,27 @@ def lee():
     return result
 
 
-n = lee()
 
 
 def ran():
-    result = ""
-    ans = int(input(("Enter numbers: ")))
-    if len(n) != len(set(n)):
-        lee()
+    result1 = ""
+    n = lee()
+    # ans = int(input(("Enter numbers: ")))
+    while len(n) != len(set(n)) or n == "":
+       n = lee()
+       print("hbuhuuubuhbu", n)
+        
     else:
-        print(n)
-        a = list(str(ans))
-        na = list(n)
-        for i in a:
-            for j in na:
-                if a[int(i)] == na[int(j)]:
-                    result = "close"
-                    print(i, j)
-                    print(result)
+        print("n is now hehe " +  n)
+        # a = list(str(ans))
+        # na = list(n)
+        # for i in a:
+        #     for j in na:
+        #         # if a[int(i)] == na[int(j)]:
+        #         #     result = "close"
+        #         #     print(i, j)
+        #         #     print(result)
+        #         print(i, j)
 
 
 ran()
