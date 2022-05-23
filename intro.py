@@ -423,8 +423,8 @@ random.shuffle(digits)
 print(digits[:3])
 
 # Another hint:
-guess = input("What is your guess? ")
-print(guess)
+# guess = input("What is your guess? ")
+# print(guess)
 
 # Think about how you will compare the input to the random number, what format
 # should they be in? Maybe some sort of sequence? Watch the Lecture video for more hints!
@@ -455,7 +455,7 @@ def ran():
     while len(n) != len(set(n)) or n == "":
        n = lee()
        print("hbuhuuubuhbu", n)
-        
+
     else:
         print("n is now hehe " +  n)
         # a = list(str(ans))
@@ -473,3 +473,21 @@ ran()
 
 
 # End of exercise
+
+# Intro to REGEX in PYTHON
+
+import re
+
+def multi_re_find(pattern, phrase):
+    for pat in pattern:
+        print(f"Searching for pattern {pat}")
+        print(re.findall(pat,phrase))
+
+        print("/n")
+
+# test_phrase = "sdsd..sssddd..sdddsddd...dsds...dssssss...sdddddd"
+test_phrase = "This is a String! But it has punctuations. How can we remove it?"
+print(re.sub(".", " ", test_phrase))
+test_pattern = ["[^!.?]+"]
+# use r to change string t literall string
+multi_re_find(test_pattern, test_phrase)
